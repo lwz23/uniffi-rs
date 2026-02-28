@@ -15,6 +15,10 @@
   rather than a flat `uniffi.toml`-style override. Old-style files will produce a warning and be ignored.
   See [#2866](https://github.com/mozilla/uniffi-rs/issues/2866)
 
+### ⚠️ Breaking Changes for external bindings authors ⚠️
+- The signature for `CrateConfigSupplier::from_cargo_metadata_command` has changed.
+  It now inputs a `MetadataCommand` instance and a `CargoMetadataOptions` rather than just a `no_deps` flag.
+
 ### What's Fixed
 
 - Fixed bug that sometimes prevented renaming items inside a submodule [#2792](https://github.com/mozilla/uniffi-rs/pull/2792)
